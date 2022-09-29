@@ -92,7 +92,7 @@ summary(daily_steps)
 summary(daily_intensities)
 ```
 
-Luego de controlar los dataframes, encontramos que hay similitudes de datos dentro de "activity" para los dataframes "daily_calories","daily_steps","daily_intensities"
+Luego de controlar los dataframes, encontramos que hay similitudes de datos dentro de la tabla "activity" para los dataframes "daily_calories","daily_steps","daily_intensities"
 Para validar que se encuentran todos los datos, utilizamos el operador %in%
 ```
 daily_calories %in% activity
@@ -100,6 +100,47 @@ daily_steps %in% activity
 daily_intensities %in% activity
 ```
 Como los tres resultados fueron verdadero, se eliminan los dataframes indicados del proyecto.
+
+
+Comenzamos con la limpieza de la tabla "Activity"
+Al verificar la cantidad de ID's registrados
+```
+n_distinct(activity$Id)
+```
+Encontramos que hay 30 IDs que contemplan todos los campos de informaciòn y 3Id's que poseen datos incompletos, es probable que los mismos correspondan a antiguos dispositivos o que estaban utilizando dos dispositivos ese mismo dia, pero debido a que la falta de datos nos generaria incongruencias en el resultado, se procede a eliminar del analisis todo ID que no contemple todos los campos de informaciòn
+
+Continuamos validando las columnas TotalDistance y TrackerDistance, donde encontramos que los valores son identicos, excepto en algunos pocos casos, posiblemente porque el wereable trackea todo el dia y tambien debe tener guardar este valor por separado cuando el usuario inicia/finaliza cada actividad.
+Para mantener la consistencia, pasamos a eliminar las diferencias.
+
+```
+difference <- activity$TotalDistance == activity$TrackerDistance
+todelete <- which(difference == FALSE)
+clean_activity <- activity[-todelete, ]
+```
+
+Quitamos las columnas que nos quedan sobrantes relacionadas, en este caso serian TrackerDistance y LoggedActivitiesDistance
+```
+clean_activity <- select(clean_activity, -c(TrackerDistance, LoggedActivitiesDistance))
+```
+
+Convertimos los strings de fecha al formato correspondiente para poder utilizar mas adelante, con las funciones que nos provee "lubridate"
+Se utiliza formato de fecha Americano
+```
+clean_activity$ActivityDate <- mdy(clean_activity$ActivityDate)
+sleep$SleepDay <- mdy_hms(sleep$SleepDay)
+weight$Date <- mdy_hms(weight$Date)
+weight$Date <- format(as.Date(weight$Date), "%Y-%m-%d")
+```
+
+Unificamos todas las tablas en una nueva y modificamos el nombre de la 2da columna final.
+Finalizamos agregando una nueva columna con el detalle de que dia de la semana se guardo ese registro con "lubridate"
+```
+sleep_activity <- merge(sleep, clean_activity, by.x = c("Id", "Sleepday"), by.y = c("Id", "ActivityDate"), all = TRUE)
+sleep_activity_weight <- merge(sleep_activity, weight, by.x = c("Id", "Sleepday"), by.y = c("Id", "Date"), all = TRUE)
+colnames(sleep_activity_weight)[2] <- "Date"
+dayoftheweek <- wday(sleep_activity_weight$Date, label = T, week_start = 1)
+complete_activity <- add_column(sleep_activity_weight, dayoftheweek, .after = "Date")
+```
 
 
 
