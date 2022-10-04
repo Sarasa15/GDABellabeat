@@ -142,7 +142,40 @@ dayoftheweek <- wday(sleep_activity_weight$Date, label = T, week_start = 1)
 complete_activity <- add_column(sleep_activity_weight, dayoftheweek, .after = "Date")
 ```
 
+Generamos una nueva tabla con el promedio de los datos de la tabla "complete_activity" la cual utilizaremos para realizar VIz.
 
+```
+to_viz <- complete_activity %>% group_by(dayoftheweek) %>%
+    summarise('Total Steps' = mean(TotalSteps, na.rm = T), 
+              'Total Distance' = mean(TotalDistance, na.rm = T),
+              'Calories' = mean(Calories, na.rm = T),
+              'Total Hours Asleep' = mean(TotalMinutesAsleep, na.rm = T)/60,
+              'Total Hours In Bed' = mean(TotalTimeInBed, na.rm = T)/60,
+              'Very Active Minutes' = mean(VeryActiveMinutes, na.rm = T),
+              'Fairly Active Minutes' = mean(FairlyActiveMinutes, na.rm = T),
+              'Lightly Active Minutes' = mean(LightlyActiveMinutes, na.rm = T),
+              'Sedentary Minutes' = mean(SedentaryMinutes, na.rm = T)
+              )
+```
 
+Terminamos exportando esta nueva tabla como .csv.
 
+```
+write.csv(to_viz, "to_viz.csv")
+```
+
+# 4. Analisis y Visualización
+
+ Mediante la utilizaciòn de Tableau Public, generamos el siguiente grafico para poder comprender el comportamiento de los usuarios.
+ 
+![image](https://user-images.githubusercontent.com/34684651/193837415-3cd4a4d5-7f55-4769-aa7a-6a9b83c51907.png)
+Resumen Grafico: Dias de la semana, Calorias Vs Pasos Realizados Vs Distancia Recorrida
+
+¿Que es lo que nos cuenta el grafico?
+  -Podemos observar como los usuarios al segundo dia de la semana tienen un pico de actividad fisica, posiblemente por el entusiasmo que genera una vida saludable y realizar actividad fisica, pero mientras van pasando los dias, este comportamiento va decayendo.
+  Para el Fin de semana observamos un incremento tanto en calorias consumidas, ya que la gente tiende a no preparar las comidas para los fines de semana o tienen encuentros sociales donde no pueden preveer lo que van a ingerir. No obstante podemos encontrar un aumento en la actividad fisica ya que se dispone de mas horas libres los fines de semana contra los dias de semana, lo que genera que las personas sean mas propensas a realizar actividad fisica leve o moderada pero por un tiempo prolongado (ej: salir a caminar o recorrer centros turisticos).
+  -Destacamos el dia Domingo por su bajo registro de actividad fisica(Pasos realizados y Distancia recorrida), ya que en este dia las personas tienden a tomarlo como un descanso total de todo tipo de actividades, y quedarse en casa a recuperar energias para prepararse al inicio de la semana.
+  
+  
+  
 
