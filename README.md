@@ -189,7 +189,7 @@ Resumen Grafico: Dias de la semana, Calorias Vs Pasos Realizados Vs Distancia Re
   
  ![image](https://user-images.githubusercontent.com/34684651/193864938-eebee878-cc30-49c6-85cd-c0d149095390.png)
 
-¿Existen relaciones entre las "horas acostado" y "horas de dormidos"?
+¿Existen relaciones entre las "horas de cama" y "horas de sueño"?
 
   -Vemos que los usuarios no siempre llegan a cumplir los tiempos recomendados por la OMS en horas de sueño (7hs en total), unicamente los fines de semana y los dias miercoles, es muy probable que esto es a efecto de que los dias Martes son los dias de mayor actividad fisica y por naturaleza del cuerpo, este requiere mas tiempo de sueño para recuperarse.
   -Los dias Domingos las personas llegan a estar casi 1 hora mas de tiempo acostado contra las horas de sueño, haciendo hincapie en que estos dias las personas tienden a relajarse mas y preferir utilizar la cama no solo para dormir, probablemente para ver la TV, leer libros, utilizar su celular.
