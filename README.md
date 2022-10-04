@@ -174,12 +174,14 @@ Resumen Grafico: Dias de la semana, Calorias Vs Pasos Realizados Vs Distancia Re
 
 ¿Que es lo que nos cuenta el grafico?
   -Podemos observar el comportamiento de los usuarios durante los dias de la semana,  el primer pico lo vemos al segundo dia de la semana donde la actividad fisica se incrementa, posiblemente por el entusiasmo que genera una vida saludable y realizar actividad fisica, pero mientras van pasando los dias, este comportamiento va decayendo.
+  
   Para el Fin de semana observamos un incremento tanto en calorias consumidas, ya que la gente tiende a no preparar las comidas para los fines de semana o tienen encuentros sociales donde no pueden preveer lo que van a ingerir. No obstante podemos encontrar un aumento en la actividad fisica ya que se dispone de mas horas libres los fines de semana contra los dias de semana, lo que genera que las personas sean mas propensas a realizar actividad fisica leve o moderada pero por un tiempo prolongado (ej: salir a caminar o recorrer centros turisticos).
+  
   -Destacamos el dia Domingo por su bajo registro de actividad fisica(Pasos realizados y Distancia recorrida), ya que en este dia las personas tienden a tomarlo como un descanso total de todo tipo de actividades, y quedarse en casa a recuperar energias para prepararse al inicio de la semana.
   
  
  ![image](https://user-images.githubusercontent.com/34684651/193853876-ba9ec3d6-c7c5-439d-920f-6f2f5135124e.png)
-  * los datos de "Fairly Active y Very Active" se suman ya que suponemos que corresponden a la misma actividad fisica solo que se contabiliza cuando el usuario pasa cierto rango de frecuencia cardiaca
+  * los datos de "Fairly Active y Very Active" se suman ya que suponemos que corresponden a la misma actividad fisica solo que se marca que corresponde a una u otra cuando el usuario pasa cierto rango de frecuencia cardiaca.
   
  ¿Cuanto tiempo se emplea en cada actividad?
   -Todos los dias los usuarios han cumplido la cantidad minima de minutos de actividad fisica recomendada por la OMS (150 a 300 Min por semana, 28Min por dia).
