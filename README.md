@@ -73,12 +73,12 @@ library(lubridate)
 Como se importan los datasets:
 
 ```
-activity <- read.csv("dailyActivity_merged.csv")
-sleep <- read.csv("sleepDay_merged.csv")
-weight <- read.csv("weightLogInfo_merged.csv")
-daily_calories <- read.csv("dailyCalories_merged.csv")
-daily_steps <- read.csv("dailySteps_merged.csv")
-daily_intensities <- read.csv("dailyIntensities_merged.csv")
+activity <- read.csv("dailyActivity.csv")
+sleep <- read.csv("sleepDay.csv")
+weight <- read.csv("weightLogInfo.csv")
+daily_calories <- read.csv("dailyCalories.csv")
+daily_steps <- read.csv("dailySteps.csv")
+daily_intensities <- read.csv("dailyIntensities.csv")
 ```
 
 Control de los dataframes asignados:
