@@ -1,16 +1,16 @@
 # GDABellabeat
-Proyecto final de Análisis para Certificación Google Data Analytics basado en Bellabeat
+Proyecto final de Análisis para Certificación Google Data Analytics basado en [Bellabeat](https://bellabeat.com/)
 
 # Tabla de Contenidos
 1. Resumen
 2. Descripcion de fuente de datos
 3. Limpieza y Manipulación de datos
 4. Analisis y Visualización
-5. Recomendación en base al analisis
+5. Recomendaciones en base a lo analizado
 
 
 # 1. Resumen
-[Bellabeat](https://bellabeat.com/) es una marca enfocada en el bienestar de las mujeres, el cual genero un ecosistema de productos y servicios enfocados en la salud y bienestar de las mujeres.
+[Bellabeat](https://bellabeat.com/) es una marca enfocada en el bienestar de las mujeres, el cual genero un ecosistema de productos y servicios enfocados en la salud.
 Su lema es "Empoderando las mujeres para desbloquear todo su potencial".
 Uno de sus productos estrella, "Leaf" un weareable tipo pulsera con gran estilo, permite recopilar información del usuario y otorgarle mediante su app recomendaciónes y sugerencias para mejorar su salud y bien estar en general.
 Gracias al gran aumento de interes por parte del publico en la salud, los dispositivos tipo Weareables fueron incrementando en atenciòn y ventas alrededor del mundo.
@@ -177,7 +177,7 @@ Resumen Grafico: Dias de la semana, Calorias Vs Pasos Realizados Vs Distancia Re
   
   Para el Fin de semana observamos un incremento tanto en calorias consumidas, ya que la gente tiende a no preparar las comidas para los fines de semana o tienen encuentros sociales donde no pueden preveer lo que van a ingerir. No obstante podemos encontrar un aumento en la actividad fisica ya que se dispone de mas horas libres los fines de semana contra los dias de semana, lo que genera que las personas sean mas propensas a realizar actividad fisica leve o moderada pero por un tiempo prolongado (ej: salir a caminar o recorrer centros turisticos).
   
-  -Destacamos el dia Domingo por su bajo registro de actividad fisica(Pasos realizados y Distancia recorrida), ya que en este dia las personas tienden a tomarlo como un descanso total de todo tipo de actividades, y quedarse en casa a recuperar energias para prepararse al inicio de la semana.
+  -Destacamos el dia Domingo por su bajo registro de actividad fisica(Pasos realizados y Distancia recorrida), ya que en este dia las personas tienden a tomarlo como un descanso total de todo tipo de actividades, y quedarse en casa a recuperar energias para prepararse para el inicio de la semana.
   
  
  ![image](https://user-images.githubusercontent.com/34684651/193853876-ba9ec3d6-c7c5-439d-920f-6f2f5135124e.png)
@@ -189,7 +189,20 @@ Resumen Grafico: Dias de la semana, Calorias Vs Pasos Realizados Vs Distancia Re
   
  ![image](https://user-images.githubusercontent.com/34684651/193864938-eebee878-cc30-49c6-85cd-c0d149095390.png)
 
-¿Existen relaciones entre las "horas de cama" y "horas de sueño"?
+¿Existen relaciones entre las "horas en la cama" y "horas de sueño"?
 
   -Vemos que los usuarios no siempre llegan a cumplir los tiempos recomendados por la OMS en horas de sueño (7hs en total), unicamente los fines de semana y los dias miercoles, es muy probable que esto es a efecto de que los dias Martes son los dias de mayor actividad fisica y por naturaleza del cuerpo, este requiere mas tiempo de sueño para recuperarse.
   -Los dias Domingos las personas llegan a estar casi 1 hora mas de tiempo acostado contra las horas de sueño, haciendo hincapie en que estos dias las personas tienden a relajarse mas y preferir utilizar la cama no solo para dormir, probablemente para ver la TV, leer libros, utilizar su celular.
+  
+# 5. Recomendaciones en base a lo analizado
+
+  5.a - Utilizaciòn de un sistema de notificaciónes push para incrementar actividad fisica, reducir sueño:
+        Como vimos anteriormente, ciertos usuarios tienden a no realizar tanta actividad fisica en dias puntuales, podriamos aprovechar mediante la utilizaciòn de una notificaciòn al usuario, alentandolo a salir a caminar, bailar o hacer alguna actividad fisica para asi poder incrementar la cantidad de calorias consumidas durante la semana.
+        Esta misma herramienta tambien podriamos utilizarla para recomendar no pasar demasiado tiempo en la cama si no es para dormir y asi poder mejorar la calidad y tiempos de sueño de los usuarios.
+        
+  5.b - Alertar a los usuarios si pasaron demasiado tiempo sin realizar movimiento alguno, como en un trabajo de oficina, y sugerirles realizar algun tipo de Break para no acumular tantas horas de sedentarismo.
+        Agregar una barra de progreso mostrando la cantidad de actividad fisica que realizaron y cuanto les falta para cumplir el objetivo diario predefinido.
+  
+  5.c - Crear un apartado tipo comunidad/grupos para incentivar la realización de actividad fisica, ya que esta comprobando que cuando las personas hacen actividad fisica en grupo tienden a auto-superarse en cada objetivo, motivarse para continuar ejercitandose y ser mas consistente.
+
+Alan Torres
